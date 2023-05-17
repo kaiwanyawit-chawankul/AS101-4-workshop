@@ -18,5 +18,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - bash:|
-      docker run --rm -v "$PWD/web:/target" hawkeyesec/scanner-cli:latest # <Fill out the second step>
+      - run: |
+          docker run --rm -v "$PWD/web:/target" hawkeyesec/scanner-cli:latest # <Fill out the second step>
